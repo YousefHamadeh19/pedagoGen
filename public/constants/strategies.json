@@ -1,0 +1,213 @@
+[
+    {
+        "id": 1,
+        "strategyName": "Real-Life Modeling Routine",
+        "curriculum": "IB",
+        "gradeLevel": "Middle School",
+        "subject": "Mathematics",
+        "topic": "Slope and Intercept",
+        "lesson": "Linear Relationships",
+        "teacherActions": [
+            "Present two phone plans with different monthly fees and per-minute costs.",
+            "Ask students to record values in a table before introducing equations.",
+            "Guide students to graph the data points.",
+            "Prompt discussion: What does the starting value represent? What does the rate show?",
+            "Introduce slope and intercept language after student discovery."
+        ],
+        "studentActions": [
+            "Organize real data into tables",
+            "Plot graphs manually or digitally",
+            "Explain findings verbally before writing equations"
+        ],
+        "accreditationAddressed": [
+            "Curriculum Alignment & Relevance",
+            "Student-Centered Instruction",
+            "Conceptual Understanding",
+            "Inquiry-Based Learning"
+        ],
+        "frameworkLang": [
+            "Instruction engages students in inquiry and conceptual understanding",
+            "Teaching connects learning to real-life and authentic contexts",
+            "Curriculum promotes transfer of learning"
+        ],
+        "accrediting": [
+            "IB Programme Standards & Practices",
+            "CIS Domain: Teaching & Learning",
+            "NEASC: Curriculum & Instruction"
+        ]
+    },
+    {
+        "id": 2,
+        "strategyName": "Predict-Observe-Explain Lab",
+        "curriculum": "American",
+        "gradeLevel": "Middle School",
+        "subject": "Science",
+        "topic": "Energy Flow in Food Webs",
+        "lesson": "Ecosystems",
+        "teacherActions": [
+            "Show an image of a missing predator species.",
+            "Ask students to predict the impact on the ecosystem.",
+            "Run a simple simulation or card-based food web activity.",
+            "Pause for observation and note changes.",
+            "Facilitate explanation using scientific vocabulary."
+        ],
+        "studentActions": [
+            "Make written predictions",
+            "Observe cause-effect changes",
+            "Explain outcomes using evidence"
+        ],
+        "accreditationAddressed": [
+            "Inquiry and Scientific Practices",
+            "Use of Evidence and Reasoning",
+            "Active Student Engagement"
+        ],
+        "frameworkLang": [
+            "Students actively investigate questions using evidence",
+            "Instruction reflects disciplinary practices",
+            "Learning experiences promote critical thinking"
+        ],
+        "accrediting": [
+            "NEASC"
+        ]
+    },
+    {
+        "id": 3,
+        "strategyName": "Guided Inference Strip Activity",
+        "curriculum": "British",
+        "gradeLevel": "Primary",
+        "subject": "English",
+        "topic": "Inference",
+        "lesson": "Reading Comprehension",
+        "teacherActions": [
+            "Cut a narrative text into short sections.",
+            "Model one inference aloud using evidence.",
+            "Give groups one text strip at a time.",
+            "Ask: What can we infer? What supports it?",
+            "Collect responses using a class inference chart."
+        ],
+        "studentActions": [
+            "Read short text extracts",
+            "Highlight clues",
+            "Justify inferences verbally and in writing"
+        ],
+        "accreditationAddressed": [
+            "Literacy Development",
+            "Structured Pedagogy",
+            "Inclusivity and Support"
+        ],
+        "frameworkLang": [
+            "Teaching strategies scaffold learning effectively",
+            "Instruction supports literacy progression",
+            "Lessons meet the needs of diverse learners"
+        ],
+        "accrediting": [
+            "Ofsted-aligned inspections",
+            "CIS",
+            "NEASC"
+        ]
+    },
+    {
+        "id": 4,
+        "strategyName": "Visual Timeline Build",
+        "curriculum": "Cambridge",
+        "gradeLevel": "Middle School",
+        "subject": "History",
+        "topic": "Daily Life",
+        "lesson": "Ancient Egypt",
+        "teacherActions": [
+            "Provide images and fact cards.",
+            "Assign categories (home, food, work, religion).",
+            "Have students place items on a shared timeline wall.",
+            "Ask students to justify placement choices."
+        ],
+        "studentActions": [
+            "Sort information",
+            "Place historical evidence visually",
+            "Explain cause-effect relationships"
+        ],
+        "accreditationAddressed": [
+            "Curriculum Coherence",
+            "Historical Thinking",
+            "Student Engagement"
+        ],
+        "frameworkLang": [
+            "Curriculum enables understanding of concepts over time",
+            "Students analyze relationships and causation",
+            "Learning experiences are engaging and structured"
+        ],
+        "accrediting": [
+            "CIS",
+            "Cambridge School Inspection frameworks",
+            "NEASC"
+        ]
+    },
+    {
+        "id": 5,
+        "strategyName": "Sentence Frame Writing Workshop",
+        "curriculum": "MOE",
+        "gradeLevel": "Middle School",
+        "subject": "Arabic",
+        "topic": "Persuasive Paragraphs",
+        "lesson": "Writing",
+        "teacherActions": [
+            "Display model paragraph with highlighted connectors.",
+            "Provide sentence frames and vocabulary lists.",
+            "Guide whole-class paragraph construction.",
+            "Gradually remove supports."
+        ],
+        "studentActions": [
+            "Analyze model texts",
+            "Use structured sentence frames",
+            "Write independently by lesson end"
+        ],
+        "accreditationAddressed": [
+            "Language Development",
+            "Equity & Access",
+            "Instructional Scaffolding"
+        ],
+        "frameworkLang": [
+            "Instruction supports language acquisition",
+            "Teaching strategies ensure access for all learners",
+            "Students progress from supported to independent learning"
+        ],
+        "accrediting": [
+            "Qatar Ministry of Education",
+            "CIS",
+            "NEASC"
+        ]
+    },
+    {
+        "id": 6,
+        "strategyName": "Apply-Test-Justify Task",
+        "curriculum": "IB",
+        "gradeLevel": "High School",
+        "subject": "Science",
+        "topic": "Motion and Forces",
+        "lesson": "Newton's Laws",
+        "teacherActions": [
+            "Present a practical challenge (safe ramp design).",
+            "Ask groups to predict outcomes using formulas.",
+            "Allow testing using simulations or models.",
+            "Require written justification of decisions."
+        ],
+        "studentActions": [
+            "Apply formulas to real contexts",
+            "Test predictions",
+            "Justify results scientifically"
+        ],
+        "accreditationAddressed": [
+            "Application of Knowledge",
+            "Assessment for Learning",
+            "Higher-Order Thinking"
+        ],
+        "frameworkLang": [
+            "Students apply learning to unfamiliar contexts",
+            "Assessment tasks promote reasoning and justification",
+            "Teaching encourages critical and analytical thinking"
+        ],
+        "accrediting": [
+            "IB",
+            "CIS"
+        ]
+    }
+]

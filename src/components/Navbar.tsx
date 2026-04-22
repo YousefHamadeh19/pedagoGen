@@ -1,0 +1,53 @@
+"use client";
+
+import Link from "next/link";
+import { useAuth } from "@/hooks/useAuth";
+const Navbar = () => {
+    const { user, logout } = useAuth();
+
+
+    const handleLogout = () => {
+        logout();
+
+        window.location.href = '/';
+    };
+
+    return (
+        <nav className="flex items-center justify-between px-12 py-4 bg-white border-b border-gray-100 shadow-sm">
+            <div className="text-xl font-bold text-black tracking-tight cursor-default">
+                PedagoGen
+            </div>
+
+            <div className="flex items-center gap-4">
+                {user ? (
+                    <>
+                        <span className="text-gray-600 text-sm">
+                         {user.role} Dashboard
+                        </span>
+                        <button
+                            onClick={handleLogout}
+                            className="px-4 py-2 text-sm font-medium border border-gray-200 rounded-lg cursor-pointer transition-all duration-300 hover:bg-black hover:text-white hover:border-black active:scale-95"
+                        >
+                            Log out
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <Link href="/auth">
+                            <button className="px-5 py-2 text-sm font-medium text-black bg-white border border-black rounded-lg cursor-pointer transition-all duration-300 hover:bg-black hover:text-white active:scale-95">
+                                Login
+                            </button>
+                        </Link>
+                        <Link href="/auth">
+                            <button className="px-5 py-2 text-sm font-medium text-white bg-black border border-black rounded-lg cursor-pointer transition-all duration-300 active:scale-95 shadow-sm">
+                                Sign up
+                            </button>
+                        </Link>
+                    </>
+                )}
+            </div>
+        </nav>
+    );
+};
+
+export default Navbar;
