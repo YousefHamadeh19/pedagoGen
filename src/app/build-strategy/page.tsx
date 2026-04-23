@@ -41,7 +41,7 @@ export default function BuildStrategy() {
             // Store id in localStorage
             localStorage.setItem("strategies", (match.id).toString())            
             // route to strategy page 
-            router.push("strategies");
+            router.push("strategy");
             return;
         }
     }
