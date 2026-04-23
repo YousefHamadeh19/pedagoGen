@@ -93,7 +93,7 @@ const AuthenticationForm = () => {
                 });
 
 
-            }, 3000);
+            }, 1500);
             return;
         }
 
@@ -108,7 +108,7 @@ const AuthenticationForm = () => {
             }
 
 
-        }, 3000);
+        }, 1500);
     }
 
     function handleRoleBasedSubmit(role: 'Coordinator' | 'Teacher') {
