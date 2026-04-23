@@ -16,7 +16,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="flex items-center justify-between px-12 py-4 bg-white border-b border-gray-100 shadow-sm">
+        <nav className="flex items-center justify-between px-12 py-1 bg-white border-b border-gray-100 shadow-sm">
             <div className="text-xl font-bold text-black tracking-tight cursor-default flex justify-center items-center">
                 <img src={Logo.src} alt="logo" className="w-20" onClick={() => router.replace('/')} />
                 PedagoGen

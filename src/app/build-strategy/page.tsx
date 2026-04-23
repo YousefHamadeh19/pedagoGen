@@ -1,7 +1,7 @@
 "use client";
 import { Key, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import SelectInput from "./components/SelectInput";
+import SelectInput from "../../components/ui/SelectInput";
 import { Stars } from 'lucide-react'
 import { STRATEGY_DATA } from '../../../public/constants/constants';
 import { toast } from 'react-toastify';

@@ -6,6 +6,7 @@ import { AuthProvider } from '@/hooks/useAuth';
 // Components
 import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
+import Footer from "@/components/Footer";
 
 const roboto = Rubik({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
       lang="en"
       className={`${roboto.className} h-full antialiased`}
     >
-      <body className="h-screen">
+      <body className="h-full">
         <div className="flex flex-col h-screen overflow-hidden">
           {/* The Navbar will grow or shrink based on its content */}
           <AuthProvider>

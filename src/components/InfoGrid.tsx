@@ -48,7 +48,7 @@ const InfoGrid = () => {
     ];
 
     return (
-        <section className="p-12">
+        <section className="p-6">
             {/* Container Logic:
           - grid-cols-1: Single column on mobile
           - md:flex: Switches to a flex row on medium screens and up
@@ -63,7 +63,7 @@ const InfoGrid = () => {
                         <div
                             key={index}
                             onClick={() => setSelectedItem(item)}
-                            className="flex-1 flex flex-col items-center justify-center text-center p-6 border border-gray-200 rounded-xl bg-white shadow-sm cursor-pointer"
+                            className="flex-1 flex flex-col items-center justify-center text-center p-6 border border-gray-200 rounded-xl bg-white shadow-sm cursor-pointer transition-all duration-300 hover:scale-115 hover:shadow-md"
                         >
                             {/* Dynamic Icon Rendering */}
                             <div className="mb-4 text-blue-600">
