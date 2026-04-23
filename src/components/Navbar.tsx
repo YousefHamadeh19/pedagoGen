@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { LogOut } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/navigation";
 import Logo from '../../public/logo.png'
 const Navbar = () => {
     const { user, logout } = useAuth();
-
+    const router = useRouter();
 
     const handleLogout = () => {
         logout();
@@ -17,7 +18,7 @@ const Navbar = () => {
     return (
         <nav className="flex items-center justify-between px-12 py-4 bg-white border-b border-gray-100 shadow-sm">
             <div className="text-xl font-bold text-black tracking-tight cursor-default flex justify-center items-center">
-                <img src={Logo.src} alt="logo" className="w-20"/>
+                <img src={Logo.src} alt="logo" className="w-20" onClick={() => router.replace('/')} />
                 PedagoGen
             </div>
 
@@ -25,13 +26,13 @@ const Navbar = () => {
                 {user ? (
                     <>
                         <span className="text-gray-600 text-sm">
-                         {user.role} Dashboard
+                            {user.role} Dashboard
                         </span>
                         <button
                             onClick={handleLogout}
                             className="px-4 py-2 flex justify-center gap-1 text-sm font-medium border border-none cursor-pointer transition-all duration-300 active:scale-95 text-black hover:decoration-underline"
                         >
-                           <LogOut size={18}/> Log out
+                            <LogOut size={18} /> Log out
                         </button>
                     </>
                 ) : (

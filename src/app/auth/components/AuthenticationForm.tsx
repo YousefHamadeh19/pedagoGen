@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
 import { CircularProgress, Oval } from "react-loader-spinner";
+import { toast } from "react-toastify";
 
 const AuthenticationForm = () => {
     const router = useRouter();
@@ -76,6 +77,23 @@ const AuthenticationForm = () => {
         setIsLoading(true);
 
         if (email == '' || password == '' || emailError || passwordError.error) {
+            setTimeout(() => {
+
+                // Navigate to the dashboard
+                setIsLoading(false);
+                toast.error("Fill required fields!", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored", // 'colored' gives that solid danger red
+                });
+
+
+            }, 3000);
             return;
         }
 

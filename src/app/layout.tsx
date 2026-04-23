@@ -24,7 +24,7 @@ export default function RootLayout({
       lang="en"
       className={`${roboto.className} h-full antialiased`}
     >
-      <body className="h-full">
+      <body className="h-screen">
         <div className="flex flex-col h-screen overflow-hidden">
           {/* The Navbar will grow or shrink based on its content */}
           <AuthProvider>
