@@ -95,7 +95,7 @@ export default function StrategyReflection() {
 
                     <button
                         className="w-full py-1 bg-black border border-gray-200 text-white text-sm rounded-md font-semibold text-center cursor-pointer"
-                        onClick={() => router.push("/builder-strategy")}
+                        onClick={() => router.push("/build-strategy")}
                     >
                         Submit Reflection
                     </button>
