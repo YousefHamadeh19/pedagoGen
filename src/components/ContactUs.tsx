@@ -11,7 +11,7 @@ export default function ContactSection() {
     const handleSubmit = (e: React.SubmitEvent) => {
         e.preventDefault();
 
-        const recipient = "usfnjm87@fmail.com";
+        const recipient = "info@pedagogen.com";
         const subject = encodeURIComponent(formData.subject || "Contact from PedagoGen");
         // We include the "From" email in the body since mailto uses the user's local account
         const body = encodeURIComponent(
