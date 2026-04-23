@@ -5,6 +5,7 @@ import { AuthProvider } from '@/hooks/useAuth';
 
 // Components
 import Navbar from "@/components/Navbar";
+import { ToastContainer } from "react-toastify";
 
 const roboto = Rubik({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
             <main className="flex-1 overflow-y-auto">
               {children}
             </main>
+            <ToastContainer />
           </AuthProvider>
         </div>
       </body>

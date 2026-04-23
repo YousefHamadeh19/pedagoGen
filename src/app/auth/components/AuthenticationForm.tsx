@@ -93,12 +93,15 @@ const AuthenticationForm = () => {
         }, 3000);
     }
 
-    function handleCoordinatorSubmit() {
+    function handleRoleBasedSubmit(role: 'Coordinator' | 'Teacher') {
         setIsLoading(true);
-        login({ email: email, name: "Youssef", role: 'Coordinator' });
+        login({ email: email, name: "Youssef", role: role });
 
         setTimeout(() => {
-
+            if (role == 'Teacher') {
+                router.push('/build-strategy');
+                return;
+            }
             // Navigate to the dashboard
             router.push('/dashboard');
             return;
@@ -187,12 +190,15 @@ const AuthenticationForm = () => {
 
                     <div className="w-full space-y-3">
                         <p className="text-gray-300 text-center"> Don't have an account? Sign up as:</p>
-                        <button className="w-full py-1.5 border border-gray-300 text-black text-sm font-semibold rounded-md hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">
+                        <button
+                            className="w-full py-1.5 border border-gray-300 text-black text-sm font-semibold rounded-md hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
+                            onClick={() => handleRoleBasedSubmit('Teacher')}
+                        >
                             Sign up as Teacher
                         </button>
                         <button
                             className="w-full py-1.5 border border-gray-300 text-black text-sm font-semibold rounded-md hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
-                            onClick={handleCoordinatorSubmit}
+                            onClick={() => handleRoleBasedSubmit('Coordinator')}
                         >
                             Sign up as Coordinator
                         </button>

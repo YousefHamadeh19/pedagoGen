@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import SelectInput from "./components/SelectInput";
 import { Stars } from 'lucide-react'
 import { STRATEGY_DATA } from '../../../public/constants/constants';
+import { toast } from 'react-toastify';
 
 export default function BuildStrategy() {
     const router = useRouter();
@@ -14,14 +15,23 @@ export default function BuildStrategy() {
     const [unitVal, setUnitVal] = useState<string>('');
     const [purposeVal, setPurposeVal] = useState<string>('');
     const [accreditationVal, setAccreditationVal] = useState<string>('');
-
     function validateString(val: string) {
         if (!val || val == '') return false;
         return true;
     }
 
     function handleSubmit() {
-        if (!curriculumVal || !gradeVal || !subjectVal) {
+        if (curriculumVal == '' || gradeVal == '' || subjectVal == '') {
+            toast.error("Empty Selections!", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                progress: undefined,
+                theme: "colored", // 'colored' gives that solid danger red
+            });
             return;
         }
 
@@ -32,14 +42,23 @@ export default function BuildStrategy() {
             strategy.subject === subjectVal
         );
 
-        console.log(match);
         // 3. Handle Missing/False Combinations
         if (!match) {
             // Stay on same page and show a failure toast
+            toast.error("Incompatible Selection!", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored", // 'colored' gives that solid danger red
+            });
             return;
         } else {
             // Store id in localStorage
-            localStorage.setItem("strategies", (match.id).toString())            
+            localStorage.setItem("strategies", (match.id).toString())
             // route to strategy page 
             router.push("strategy");
             return;
