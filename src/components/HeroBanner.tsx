@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 const images = [
     "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1920",
@@ -25,7 +26,7 @@ export default function HeroBanner() {
                 className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImage ? 'opacity-100' : 'opacity-0'
                     }`}
             >
-                <img
+                <Image
                     src={img}
                     alt={`Slide ${index}`}
                     className="h-full w-full object-cover"

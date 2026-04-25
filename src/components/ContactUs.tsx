@@ -8,9 +8,7 @@ export default function ContactSection() {
         subject: '',
         message: ''
     });
-    const handleSubmit = (e: React.SubmitEvent) => {
-        e.preventDefault();
-
+    const handleSubmit = () => {
         const recipient = "info@pedagogen.com";
         const subject = encodeURIComponent(formData.subject || "Contact from PedagoGen");
         // We include the "From" email in the body since mailto uses the user's local account
@@ -22,8 +20,8 @@ export default function ContactSection() {
         window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
     };
 
-    const handleChange = (e: { target: { id: any; value: any; }; }) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
+    const handleChange = (type: string, value: string) => {
+        setFormData({ ...formData, [type]: value });
     };
     return (
         <section className="bg-gray-50 py-16 px-6 sm:px-12">
@@ -53,7 +51,7 @@ export default function ContactSection() {
                                     type="email"
                                     id="from"
                                     placeholder="yourname@email.com"
-                                    onChange={handleChange}
+                                    onChange={(val) => handleChange("email", val.target.value)}
                                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                 />
                             </div>
@@ -67,7 +65,7 @@ export default function ContactSection() {
                                     type="text"
                                     id="subject"
                                     placeholder="How can we help?"
-                                    onChange={handleChange}
+                                    onChange={(val) => handleChange("subject", val.target.value)}
                                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                 />
                             </div>
@@ -80,7 +78,7 @@ export default function ContactSection() {
                                 <textarea
                                     id="message"
                                     placeholder="Your message..."
-                                    onChange={handleChange}
+                                    onChange={(val) => handleChange("message", val.target.value)}
                                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                                 ></textarea>
                             </div>

@@ -1,5 +1,5 @@
 "use client";
-import { Key, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import SelectInput from "../../components/ui/SelectInput";
 import { Stars } from 'lucide-react'

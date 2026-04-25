@@ -2,9 +2,6 @@
 import { Key } from "react";
 import { Select } from "@heroui/react";
 import { Label, ListBox } from "@heroui/react";
-interface Option {
-    value: string;
-}
 
 interface SelectInputProps {
     label?: string;

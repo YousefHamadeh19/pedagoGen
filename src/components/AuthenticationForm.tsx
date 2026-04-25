@@ -3,12 +3,12 @@
 import React, { useRef, useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
-import { CircularProgress, Oval } from "react-loader-spinner";
 import { toast } from "react-toastify";
+import PedagoLoader from "./ui/Loader";
 
 const AuthenticationForm = () => {
     const router = useRouter();
-    const { user, login } = useAuth();
+    const { login } = useAuth();
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
     const timerRef = useRef<NodeJS.Timeout | null>(null); // This is your "emailTimer"
@@ -17,7 +17,6 @@ const AuthenticationForm = () => {
     const [emailError, setEmailError] = useState<boolean>(false);
     const [passwordError, setPasswordError] = useState<{ error: boolean, message: string }>({ error: false, message: '' });
     const [role, setRole] = useState<'Teacher' | 'Coordinator'>('Teacher');
-    const [coordinatorLogin, setCoordinatorLogin] = useState<boolean>(false);
 
     function handleEmailChange(e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) {
         const newValue = e.target.value;
@@ -113,6 +112,7 @@ const AuthenticationForm = () => {
 
     function handleRoleBasedSubmit(role: 'Coordinator' | 'Teacher') {
         setIsLoading(true);
+        setRole(role);
         login({ email: email, name: "Youssef", role: role });
 
         setTimeout(() => {
@@ -129,20 +129,7 @@ const AuthenticationForm = () => {
     return (
         isLoading
             ?
-            <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-gray-100">
-                <Oval
-                    height={80}
-                    width={80}
-                    color="#2298f2"
-                    wrapperStyle={{}}
-                    wrapperClass=""
-                    visible={true}
-                    ariaLabel='oval-loading'
-                    secondaryColor="#2298f2"
-                    strokeWidth={2}
-                    strokeWidthSecondary={2}
-                />
-            </div>
+            <PedagoLoader isLoading={isLoading} customMessage={["Signing you in!"]} />
             :
 
             <div className="min-h-screen w-full flex items-center justify-center bg-gray-100">
@@ -207,7 +194,7 @@ const AuthenticationForm = () => {
                     {/* 6. Sign up buttons */}
 
                     <div className="w-full space-y-3">
-                        <p className="text-gray-300 text-center"> Don't have an account? Sign up as:</p>
+                        <p className="text-gray-300 text-center"> Don&apos;t have an account? Sign up as:</p>
                         <button
                             className="w-full py-1.5 border border-gray-300 text-black text-sm font-semibold rounded-md hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
                             onClick={() => handleRoleBasedSubmit('Teacher')}

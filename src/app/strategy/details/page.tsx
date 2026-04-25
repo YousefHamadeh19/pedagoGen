@@ -1,5 +1,5 @@
 "use client";
-import { useRouter, useParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Info, BookOpen, User, Users, Bookmark, BrainCircuit } from 'lucide-react'; // Assuming Lucide for icons
 import strategyDataRaw from '../../../../public/constants/strategies.json';
 import { useState } from 'react';

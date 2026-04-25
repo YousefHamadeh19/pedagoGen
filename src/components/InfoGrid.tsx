@@ -1,10 +1,17 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BookOpen, ClipboardCheck, Users, Target, Medal, X, CheckCircle2 } from "lucide-react"; // Example icon library
+import { BookOpen, ClipboardCheck, Users, Target, Medal, X, CheckCircle2, LucideIcon } from "lucide-react"; // Example icon library
 
+interface Strategy {
+    icon: LucideIcon;
+    title: string;
+    text: string;
+    details: string;
+    whatItMeans: string[];
+}
 const InfoGrid = () => {
-    const [selectedItem, setSelectedItem] = useState<any | null>(null);
+    const [selectedItem, setSelectedItem] = useState<Strategy | null>(null);
 
     const items = [
         {

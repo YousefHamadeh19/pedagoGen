@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { authStorage, User } from '@/lib/auth-storage';
 
 interface AuthContextType {
@@ -13,14 +13,11 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | null>(null);
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState(() => {
+    // This runs synchronously before the first render
+    return authStorage.getUser();
+  });
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const savedUser = authStorage.getUser();
-    setUser(savedUser);
-    setIsLoading(false);
-  }, []);
 
   const login = (userData: User) => {
     authStorage.saveUser(userData);

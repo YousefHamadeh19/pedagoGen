@@ -32,7 +32,7 @@ export default function StrategyReflection() {
                     <div className="bg-blue-50 border border-blue-100 rounded-md p-4 mb-6">
                         <span className="text-blue-800 flex gap-1 text-sm font-bold tracking-wider mb-2">
                             <Info size={15} />
-                            How this works: Your feedback updates your class profile and improves the AI's strategy
+                            How this works: Your feedback updates your class profile and improves the AI&apos;s strategy
                             weighting engine for future recommendation.
                         </span>
                     </div>

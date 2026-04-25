@@ -1,6 +1,5 @@
 "use client";
 import strategyDataRaw from '../../../public/constants/strategies.json';
-import { Strategy, StrategyManager } from '@/models/StrategyManager';
 import { useRouter } from 'next/navigation';
 // Assuming STRATEGY_DATA is imported or passed as a prop
 export default function StrategiesDisplay() {
