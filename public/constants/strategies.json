@@ -2,6 +2,7 @@
     {
         "id": 1,
         "strategyName": "Real-Life Modeling Routine",
+        "description": "This strategy bridges abstract concepts and practical application by demonstrating how academic skills are used in everyday professional or personal contexts. It involves the teacher \"thinking out loud\" while performing a task—such as budgeting, analyzing a news article, or measuring for a DIY project—to show students the real-world relevance and mental processes behind their learning.",
         "curriculum": "IB",
         "gradeLevel": "Middle School",
         "subject": "Mathematics",
@@ -39,6 +40,7 @@
     {
         "id": 2,
         "strategyName": "Predict-Observe-Explain Lab",
+        "description" : "Students apply a concept to a new problem, test their hypothesis through experimentation or calculation, and then provide a logical defense (justification) for why their results are valid. This shifts the focus from \"getting the right answer\" to mastering the underlying logic.",
         "curriculum": "American",
         "gradeLevel": "Middle School",
         "subject": "Science",
@@ -73,6 +75,7 @@
     {
         "id": 3,
         "strategyName": "Guided Inference Strip Activity",
+        "description" : "A scaffolded writing exercise where students are provided with partially completed sentences (frames) to help them structure academic arguments. It is particularly effective for helping English Language Learners (ELL) or students new to a subject use formal technical vocabulary in context.",
         "curriculum": "British",
         "gradeLevel": "Primary",
         "subject": "English",
@@ -109,6 +112,7 @@
     {
         "id": 4,
         "strategyName": "Visual Timeline Build",
+        "description" : "A collaborative strategy where students arrange events, processes, or narrative beats in a spatial sequence. By physically or digitally mapping these points, students can better identify cause-and-effect relationships and see the \"big picture\" of a complex system or historical period.",
         "curriculum": "Cambridge",
         "gradeLevel": "Middle School",
         "subject": "History",
@@ -144,6 +148,7 @@
     {
         "id": 5,
         "strategyName": "Sentence Frame Writing Workshop",
+        "description" : "Students are given strips of information—such as data points, quotes, or clues—one at a time. They must constantly revise their conclusions as new evidence is introduced, mimicking the way real researchers or detectives develop theories based on incremental data.",
         "curriculum": "MOE",
         "gradeLevel": "Middle School",
         "subject": "Arabic",
@@ -179,6 +184,7 @@
     {
         "id": 6,
         "strategyName": "Apply-Test-Justify Task",
+        "description" : "A three-phase scientific inquiry method: first, students predict the outcome of an experiment; second, they observe what actually happens; and finally, they explain any discrepancies between their initial prediction and the actual results to reconcile their mental models.",
         "curriculum": "IB",
         "gradeLevel": "High School",
         "subject": "Science",

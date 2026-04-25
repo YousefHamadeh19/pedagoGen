@@ -1,12 +1,23 @@
 "use client";
-import { STRATEGY_DATA } from '../../../public/constants/constants';
+import strategyDataRaw from '../../../public/constants/strategies.json';
+import { Strategy, StrategyManager } from '@/models/StrategyManager';
 import { useRouter } from 'next/navigation';
 // Assuming STRATEGY_DATA is imported or passed as a prop
 export default function StrategiesDisplay() {
     const router = useRouter();
-    const strategies = STRATEGY_DATA;
+    const strategies = strategyDataRaw;
+    
     function onBack() {
         router.back();
+    }
+
+    function handleGenerate(strategyId: number) {
+        localStorage.setItem("strategyId", strategyId.toString());
+
+        // Add loader
+        router.push('/strategy/details');
+
+        return;
     }
     return (
         <div className="min-h-screen bg-gray-100 p-6 md:p-12">
@@ -51,7 +62,7 @@ export default function StrategiesDisplay() {
                                 {/* Expand Button */}
                                 <button
                                     className="w-full py-1 bg-white border border-gray-200 text-black text-sm rounded-md font-semibold hover:bg-black hover:text-white transition-all text-center cursor-pointer"
-                                    onClick={() => router.push("/strategy/reflect")}
+                                    onClick={() => handleGenerate(strategy.id)}
                                 >
                                     Use This Strategy
                                 </button>

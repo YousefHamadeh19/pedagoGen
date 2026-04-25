@@ -18,7 +18,7 @@ export default function StrategyReflection() {
         <div className="max-w-7xl mx-auto mb-8">
             <button
                 onClick={onBack}
-                className="flex items-center text-gray-600 hover:text-gray-800 transition-colors font-small text-sm"
+                className="flex items-center text-gray-600 hover:text-gray-800 transition-colors font-small text-sm cursor-pointer"
             >
                 <span className="mr-2">←</span> Back to Generated Strategies
             </button>

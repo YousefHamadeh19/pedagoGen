@@ -5,6 +5,7 @@ import SelectInput from "../../components/ui/SelectInput";
 import { Stars } from 'lucide-react'
 import { STRATEGY_DATA } from '../../../public/constants/constants';
 import { toast } from 'react-toastify';
+import PedagoLoader from '@/components/ui/Loader';
 
 export default function BuildStrategy() {
     const router = useRouter();
@@ -15,6 +16,8 @@ export default function BuildStrategy() {
     const [unitVal, setUnitVal] = useState<string>('');
     const [purposeVal, setPurposeVal] = useState<string>('');
     const [accreditationVal, setAccreditationVal] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+
     function validateString(val: string) {
         if (!val || val == '') return false;
         return true;
@@ -57,15 +60,21 @@ export default function BuildStrategy() {
             });
             return;
         } else {
-            // Store id in localStorage
-            localStorage.setItem("strategies", (match.id).toString())
-            // route to strategy page 
-            router.push("strategy");
-            return;
+            setIsLoading(true);
+            setTimeout(() => {
+                setIsLoading(false);
+
+                router.push("strategy");
+                return;
+            }, 3000);
         }
     }
 
     return <main className="min-h-full w-full flex flex-col bg-gray-100 px-6">
+        isLoading
+        ?
+        <PedagoLoader isLoading={isLoading} customMessage={["Generating Strategies"]} />
+        :
         <div className="p-8 min-w-[100%]">
             <h1 className="text-black text-3xl font-bold py-3">Build Strategy</h1>
             <div className="flex flex-col lg:flex-row gap-8">
