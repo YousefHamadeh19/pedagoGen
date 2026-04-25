@@ -6,15 +6,16 @@ import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
 import Logo from '../../public/logo.png'
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import PedagoLoader from "./ui/Loader";
 const Navbar = () => {
     const { user, logout } = useAuth();
     const router = useRouter();
-
     const handleLogout = () => {
-        logout();
 
+        logout();
         window.location.href = '/';
+
     };
 
     return (
@@ -29,7 +30,7 @@ const Navbar = () => {
 
                     <button
                         onClick={handleLogout}
-                        className="px-4 py-2 flex justify-center gap-1 text-sm font-medium border border-none cursor-pointer transition-all duration-300 active:scale-95 text-black hover:decoration-underline"
+                        className="px-4 py-2 flex justify-center gap-2 text-sm font-medium border border-none cursor-pointer transition-all duration-300 active:scale-95 text-black hover:decoration-underline"
                     >
                         <span className="text-gray-600 text-sm">
                             {user.role} Dashboard

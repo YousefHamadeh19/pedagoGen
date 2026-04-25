@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "question": "How effectively did the real-life phone plan context engage students in the lesson?",
+        "options": [
+            "Very effectively – students were highly engaged",
+            "Effectively – most students were engaged",
+            "Somewhat – engagement was inconsistent",
+            "Not effectively – limited engagement"
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Before introducing equations, how well did students understand the situation using tables and data?",
+        "options": [
+            "Very well – most students demonstrated clear understanding",
+            "Well – some students needed minor support",
+            "Limited – many students were unsure",
+            "Poorly – students depended heavily on teacher explanation"
+        ]
+    },
+    {
+        "id": 3,
+        "question": "To what extent did students identify the meaning of the starting value (intercept) before formal terminology was used?",
+        "options": [
+            "Independently and accurately",
+            "With guiding questions",
+            "Only after direct explanation",
+            "Not at all"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "How successful was the strategy in helping students understand rate of change (slope) conceptually?",
+        "options": [
+            "Highly successful – students explained it in context",
+            "Moderately successful – understanding was partial",
+            "Limited – understanding was procedural",
+            "Unsuccessful – misconceptions remained"
+        ]
+    },
+    {
+        "id": 5,
+        "question": "How balanced was student talk compared to teacher talk during the lesson?",
+        "options": [
+            "Mostly student-led discussions",
+            "Balanced student and teacher talk",
+            "Mostly teacher-led with some student input",
+            "Predominantly teacher-centered"
+        ]
+    },
+    {
+        "id": 6,
+        "question": "How confident were students when explaining their graphs before writing equations?",
+        "options": [
+            "Very confident – explanations were clear and accurate",
+            "Fairly confident – some hesitation",
+            "Low confidence – explanations needed prompting",
+            "Not confident – explanations were minimal"
+        ]
+    },
+    {
+        "id": 7,
+        "question": "How effectively did this strategy support inquiry-based learning?",
+        "options": [
+            "Strongly – students discovered concepts organically",
+            "Adequately – some inquiry opportunities",
+            "Minimally – inquiry was mostly guided",
+            "Not at all – learning was directive"
+        ]
+    },
+    {
+        "id": 8,
+        "question": "How well did students connect the table, graph, and real-life context together?",
+        "options": [
+            "Seamlessly – strong conceptual connections",
+            "Mostly – minor gaps",
+            "Weakly – connections were superficial",
+            "Not at all – representations felt disconnected"
+        ]
+    },
+    {
+        "id": 9,
+        "question": "How manageable was the lesson pacing using this routine?",
+        "options": [
+            "Very manageable – pacing supported deep learning",
+            "Manageable – slight time pressure",
+            "Challenging – rushed or incomplete",
+            "Not manageable – pacing hindered learning"
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Based on student outcomes, how likely are you to refine and reuse this strategy?",
+        "options": [
+            "Definitely – with minor refinements",
+            "Likely – with some adjustments",
+            "Unlikely – significant changes needed",
+            "Not likely – strategy was ineffective"
+        ]
+    }
+]

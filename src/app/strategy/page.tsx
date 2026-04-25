@@ -1,27 +1,27 @@
 "use client";
 import strategyDataRaw from '../../../public/constants/strategies.json';
-import { useParams, useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 // Assuming STRATEGY_DATA is imported or passed as a prop
 export default function StrategiesDisplay() {
     const router = useRouter();
     const strategies = strategyDataRaw;
 
     function onBack() {
-        router.back();
+        router.push('/build-strategy');
     }
 
     function handleViewDetails(strategyId: number) {
         // Navigates to /strategy/details/1
         router.push(`/strategy/details/${strategyId}`);
     }
-    
+
     return (
         <div className="min-h-screen bg-gray-100 p-6 md:p-12">
             {/* Header & Back Button */}
             <div className="max-w-7xl mx-auto mb-8">
                 <button
                     onClick={onBack}
-                    className="flex items-center text-gray-600 hover:text-gray-800 transition-colors font-small text-sm"
+                    className="flex items-center text-gray-600 hover:text-gray-800 transition-colors font-small text-sm cursor-pointer"
                 >
                     <span className="mr-2">←</span> Back to Strategy Builder
                 </button>

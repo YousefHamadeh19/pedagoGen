@@ -4,6 +4,7 @@ import { Info, BookOpen, User, Users, Bookmark, BrainCircuit } from 'lucide-reac
 import strategyDataRaw from '../../../../../public/constants/strategies.json';
 import { useMemo, useState } from 'react';
 import PedagoLoader from '@/components/ui/Loader';
+import Footer from '@/components/Footer';
 
 export default function StrategyDetails() {
     const router = useRouter();
@@ -38,7 +39,11 @@ export default function StrategyDetails() {
         setIsLoading(true);
         setTimeout(() => {
             setIsLoading(false);
-            router.push('/strategy/reflect');
+            if (strategyId == "1") {
+                router.push('/strategy/reflect');
+                return;
+            }
+            router.push('/build-strategy');
             return;
         }, 3000)
     };
@@ -48,6 +53,7 @@ export default function StrategyDetails() {
             ?
             <PedagoLoader isLoading={isLoading} customMessage={decision == 'Save' ? ["Saving"] : ["Reflect! Generating Survey..."]} />
             :
+            <>
             <div className="min-h-screen bg-gray-100 p-6 md:p-12">
                 {/* Header & Back Button */}
                 <div className="max-w-7xl mx-auto mb-8">
@@ -134,5 +140,7 @@ export default function StrategyDetails() {
                     </div>
                 </div>
             </div>
+            <Footer showDetails={false} />
+            </>
     );
 }
