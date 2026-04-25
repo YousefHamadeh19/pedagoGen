@@ -1,19 +1,26 @@
 "use client";
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { Info, BookOpen, User, Users, Bookmark, BrainCircuit } from 'lucide-react'; // Assuming Lucide for icons
-import strategyDataRaw from '../../../../public/constants/strategies.json';
-import { useState } from 'react';
+import strategyDataRaw from '../../../../../public/constants/strategies.json';
+import { useMemo, useState } from 'react';
 import PedagoLoader from '@/components/ui/Loader';
 
 export default function StrategyDetails() {
     const router = useRouter();
-    const id = localStorage.getItem('strategyId');
+    const params = useParams();
+
+    // 1. Extract the ID from the URL params. 
+    // If your folder is [id], the key is 'id'.
+    const strategyId = params.id as string;
+
     const [decision, setDecision] = useState<"Save" | "Reflect">("Save");
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    // Logic to fetch strategy data based on ID
-    // This is a placeholder for your actual data fetching logic
-    const strategy = strategyDataRaw.find(s => s.id.toString() === id) || strategyDataRaw[0];
+    // 2. Use useMemo to find the strategy. 
+    // This ensures we only re-run the search if the ID changes.
+    const strategy = useMemo(() => {
+        return strategyDataRaw.find(s => s.id.toString() === strategyId) || strategyDataRaw[0];
+    }, [strategyId]);
 
     const onSave = () => {
         // Add save logic here

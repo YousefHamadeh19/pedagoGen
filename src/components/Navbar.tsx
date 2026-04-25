@@ -6,6 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
 import Logo from '../../public/logo.png'
 import Image from "next/image";
+import { useEffect, useState } from "react";
 const Navbar = () => {
     const { user, logout } = useAuth();
     const router = useRouter();
@@ -19,23 +20,23 @@ const Navbar = () => {
     return (
         <nav className="flex items-center justify-between px-12 py-1 bg-white border-b border-gray-100 shadow-sm">
             <div className="text-xl font-bold text-black tracking-tight cursor-default flex justify-center items-center">
-                <Image src={Logo.src} alt="logo" className="w-20" onClick={() => router.replace('/')} />
+                <Image src={Logo.src} alt="logo" onClick={() => router.replace('/')} width={50} height={50} />
                 PedagoGen
             </div>
 
             <div className="flex items-center gap-4">
                 {user ? (
-                    <>
+
+                    <button
+                        onClick={handleLogout}
+                        className="px-4 py-2 flex justify-center gap-1 text-sm font-medium border border-none cursor-pointer transition-all duration-300 active:scale-95 text-black hover:decoration-underline"
+                    >
                         <span className="text-gray-600 text-sm">
                             {user.role} Dashboard
                         </span>
-                        <button
-                            onClick={handleLogout}
-                            className="px-4 py-2 flex justify-center gap-1 text-sm font-medium border border-none cursor-pointer transition-all duration-300 active:scale-95 text-black hover:decoration-underline"
-                        >
-                            <LogOut size={18} /> Log out
-                        </button>
-                    </>
+                        <LogOut size={18} /> Log out
+                    </button>
+
                 ) : (
                     <>
                         <Link href="/auth">

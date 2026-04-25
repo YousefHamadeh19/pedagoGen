@@ -1,23 +1,20 @@
 "use client";
 import strategyDataRaw from '../../../public/constants/strategies.json';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 // Assuming STRATEGY_DATA is imported or passed as a prop
 export default function StrategiesDisplay() {
     const router = useRouter();
     const strategies = strategyDataRaw;
-    
+
     function onBack() {
         router.back();
     }
 
-    function handleGenerate(strategyId: number) {
-        localStorage.setItem("strategyId", strategyId.toString());
-
-        // Add loader
-        router.push('/strategy/details');
-
-        return;
+    function handleViewDetails(strategyId: number) {
+        // Navigates to /strategy/details/1
+        router.push(`/strategy/details/${strategyId}`);
     }
+    
     return (
         <div className="min-h-screen bg-gray-100 p-6 md:p-12">
             {/* Header & Back Button */}
@@ -61,7 +58,7 @@ export default function StrategiesDisplay() {
                                 {/* Expand Button */}
                                 <button
                                     className="w-full py-1 bg-white border border-gray-200 text-black text-sm rounded-md font-semibold hover:bg-black hover:text-white transition-all text-center cursor-pointer"
-                                    onClick={() => handleGenerate(strategy.id)}
+                                    onClick={() => handleViewDetails(strategy.id)}
                                 >
                                     Use This Strategy
                                 </button>
